@@ -1,10 +1,7 @@
 ---
-​---
 title: "Nginx代理调试 域名/api/abc->域名/abc"
-date: 2020-07-17T22:11:07+08:00
-type: it
+date: 2020-07-17T22:18:39+08:00
 draft: false
-​---
 ---
 
 # Nginx代理调试 域名/api/abc->域名/abc
@@ -15,14 +12,14 @@ draft: false
 
 ```sh
 server {
-	listen 8080;
-	root /abc/def;
-	location / {
-		index index.html;
-	}
-	location /api/ {
-		proxy_pass http://127.0.0.1:8080/;
-	}
+        listen 8080;
+        root /abc/def;
+        location / {
+                index index.html;
+        }
+        location /api/ {
+                proxy_pass http://127.0.0.1:8080/;
+        }
 }
 ```
 
